@@ -10,7 +10,7 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: chinhnd
-    password: 123456
+    password: 1
 
   jpa:
     show-sql: true
