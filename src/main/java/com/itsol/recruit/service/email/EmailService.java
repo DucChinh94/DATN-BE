@@ -184,7 +184,7 @@ public class EmailService implements EmailSender {
         SimpleDateFormat time = new SimpleDateFormat("HH:mm");
         SimpleDateFormat day = new SimpleDateFormat("dd/MM/yyyy");
         return "<div>\n" +
-                "  <p>Dear anh/chị <strong></strong></p>\n" +
+                "  <p>Dear anh/chị " + jobRegister.getUser().getName() + " <strong></strong></p>\n" +
                 "  <p>Công ty ITSOL rất vui và vinh hạnh khi nhận được hồ sơ ứng tuyển của anh/chị vào vị trí " + jobRegister.getJob().getJobPosition().getCode() + ".\n" +
                 "    Chúng tôi đã nhận được CV của anh/chị và mong muốn có một cuộc phỏng vấn để trao đổi trực tiếp về\n" +
                 "    kiến thức cũng như công việc mà anh/chị đã ứng tuyển.\n" +
@@ -197,7 +197,7 @@ public class EmailService implements EmailSender {
                 "    Chúng tôi rất hy vọng anh/chị sớm phản hồi và mong rằng chúng ta sẽ được hợp tác cùng nhau trong tương lai.\n" +
                 "  </p>\n" +
                 "  <p>\n" +
-                "    Mọi thắc mắc xin vui lòng liên hệ tới " + jobRegister.getUser().getName() + ", SĐT: " + jobRegister.getUser().getPhoneNumber() + " trong giờ hành chính để được giải đáp.\n" +
+                "    Mọi thắc mắc xin vui lòng liên hệ tới " + jobRegister.getJob().getContact().getName() + ", SĐT: " + jobRegister.getJob().getContact().getPhoneNumber() + " trong giờ hành chính để được giải đáp.\n" +
                 "  </p>\n" +
                 "  <p>\n" +
                 "    Thanks & best regards,\n" +
